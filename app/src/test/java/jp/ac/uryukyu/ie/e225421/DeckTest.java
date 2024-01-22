@@ -10,21 +10,20 @@ import org.checkerframework.checker.units.qual.degrees;
 /**
  * DeckTest
  * デッキからカードがちゃんと引かれているか確認する
- * 26枚のデッキからカードを３枚引いて残りの枚数を確かめる
- * つまり残りは23枚であることを期待。
+ * 52枚のデッキからカードを３枚引いて残りの枚数を確かめる
+ * つまり残りは49枚であることを期待。
  */
 public class DeckTest {
     @Test
     void drawTest() {
         Deck demoDeck = new Deck();
-        demoDeck.initializeDeck();
         Card demoCard = demoDeck.drawCard();
         demoCard = demoDeck.drawCard();
         demoCard = demoDeck.drawCard();
         ArrayList<Card> cards = new ArrayList<>();
         cards = demoDeck.getCards();
         int decksize = cards.size();
-        assertEquals(decksize, 23);
+        assertEquals(decksize, 49);
     }
 
 }

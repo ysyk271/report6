@@ -9,6 +9,9 @@ public class Deck {
     // コンストラクタ
     public Deck() {
         initializeDeck();
+        initializeDeck();
+        initializeDeck();
+        initializeDeck();
         shuffle();
     }
 
@@ -16,7 +19,7 @@ public class Deck {
         return cards;
     }
 
-    // カードを初期化するメソッド
+    // カードを追加する
     public void initializeDeck() {
         String[] ranks = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A" };
 
@@ -40,4 +43,12 @@ public class Deck {
         return cards.remove(0);
     }
 
+    public int calcScore(ArrayList<Card> cards) {
+        int sum = 0;
+        for (var i : cards) {
+            int num = i.getNumber();
+            sum += num;
+        }
+        return sum;
+    }
 }
