@@ -30,6 +30,7 @@ public class Card {
         }
     }
 
+    // 山札を表示する際に使用
     @Override
     public String toString() {
         return getCardName();

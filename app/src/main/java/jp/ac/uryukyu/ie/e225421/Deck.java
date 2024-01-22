@@ -43,6 +43,7 @@ public class Deck {
         return cards.remove(0);
     }
 
+    // 手札のカードの数の合計
     public int calcScore(ArrayList<Card> cards) {
         int sum = 0;
         for (var i : cards) {
